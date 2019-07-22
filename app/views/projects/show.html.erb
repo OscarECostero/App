@@ -1,0 +1,20 @@
+<section class="hero is-primary">
+<div class="hero-body">
+<div class="container">
+<h1 class="title">
+	<%= @projects.title %>
+</h1>	
+<h2 class="subtitle">
+	Publicaado por <%= @projects.user.email %>
+</h2>	
+</div>	
+</div>	
+</section>
+<br>
+<p><%= @projects.description %></p>
+<br>
+<div class="buttons">
+<%= link_to "editar", edit_project_path, class: "button is-light" %> -
+<%= link_to "eliminar", @projects, method: :delete, data: {confirm: "estas seguro de eliminar este projecto?"}, class: "button is-light" %>
+</div>
+ 

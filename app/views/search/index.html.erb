@@ -1,0 +1,15 @@
+<%= form_tag search_index_path method: :get do %>
+
+<div class="field has-addons">
+	<div class="control">
+		<%= text_field_tag :q, params[:q], class: "input", placeholder: "¿Que estas buscando?", style:"width:1100px;" %>
+	</div>
+	<div class="control">
+		<%= submit_tag "Buscar", class: "button is-primary" %>
+	</div>
+</div>
+
+<% end %>
+<br>
+
+<%= render "projects/projects" %>

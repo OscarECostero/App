@@ -1,0 +1,26 @@
+<%= form_with(model: project) do |f| %>
+	<div class="field">
+		<%= f.label :title %>
+		<%= f.text_field :title, class:"input" %>
+	</div>
+
+	<div class="field">
+		<%= f.label :is_remote %>
+		<%= f.check_box :is_remote %>
+	</div>
+
+		<div class="field">
+		<%= f.label :price %>
+		<%= f.number_field :price, class:"input" %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :description %>
+		<%= f.text_area :description, class:"textarea" %>
+	</div>  
+
+	<div class="field">
+		<%= f.submit nil, class: "button is-primary is-fullwidth" %>
+	</div> 
+	
+<% end %>	

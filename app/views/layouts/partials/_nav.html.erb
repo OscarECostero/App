@@ -1,0 +1,43 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item " >
+    	<%= link_to root_path, class: "navbar-item" do %>
+      <%= image_tag("oscar.jpeg", size:"150x150") %>
+      <% end %>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        
+      </a>
+      <%= link_to "Explorar", projects_path, class: "navbar-item" %>
+      <%= link_to "Publicar proyecto", new_project_path, class: "navbar-item" %>
+      <%= link_to "Buscar", search_index_path, class: "navbar-item" %>
+
+
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        	<% if user_signed_in? %>
+        		<%= link_to current_user.email, session_path(current_user), class: "navbar-item" %>
+				<%= link_to "cerrar sesion", session_path(current_user), method: :delete, class: "navbar-item" %>
+        	<% else %>
+
+	            <%= link_to "Iniciar sesion", new_session_path, class: "button is-light" %>
+	            <%= link_to "Registrarme", new_user_path, class: "button is-light" %>
+	        <% end %>  
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+

@@ -1,0 +1,29 @@
+<div class="columns">
+<div class="is-three-fifths">
+<h2 class="text-center bolder"> Iniciar sesion</h2>	
+<br>
+<%= form_with url: sessions_path do |f| %>   
+
+	<div class="field">
+		<%= f.label :email,"correo electronico" %>
+		<%= f.email_field :email, autofocus: true, class: "input" %>
+	</div>
+
+	<div class="field">
+		<%= f.label :password, "contraseña" %>
+		<%= f.password_field :password, autofocus: true, class: "input" %>
+	</div> 
+
+	<div class="field">
+		<%= f.submit "registrarme", class: "button is-primary is-fullwidth" %>
+	</div> 
+<% end %>	
+<br> 
+<div class="field text-center bolder">
+	O
+</div>
+<div class="field">
+<%= link_to "Crear una cuenta", new_user_path, class: "button is-danger is-fullwidth" %>
+</div>
+</div>
+</div>
